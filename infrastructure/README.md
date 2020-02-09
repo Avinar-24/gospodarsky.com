@@ -7,7 +7,7 @@ Terraform is a tool for building, changing, and versioning infrastructure as cod
 ## Installation
 
 - [Download](https://www.terraform.io/downloads.html) the Terrafom;
-- If `Unix` sysytem, move the executable file to `/usr/local/bin`.
+- If `Unix` system, move the executable file to `/usr/local/bin`.
 
 ## Commands
 - `terraform init` - Initialize a Terraform working directory;
