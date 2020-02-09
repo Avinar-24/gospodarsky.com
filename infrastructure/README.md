@@ -4,6 +4,11 @@ _Inspired by [Terraform Best Pratices](https://github.com/antonbabenko/terraform
 
 Terraform is a tool for building, changing, and versioning infrastructure as code.
 
+## Installation
+
+- [Download](https://www.terraform.io/downloads.html) the Terrafom;
+- If `Unix` sysytem, move the executable file to `/usr/local/bin`.
+
 ## Commands
 - `terraform init` - Initialize a Terraform working directory;
 - `terraform plan` - Generate and show an execution plan;
