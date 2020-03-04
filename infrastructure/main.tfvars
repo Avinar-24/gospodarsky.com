@@ -1,1 +1,1 @@
-do_token = "Paste the secret data"
+do_token = "Should be taken from environment variables"
