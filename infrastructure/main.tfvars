@@ -1,1 +1,1 @@
-do_token = "Keep in secret the data"
+do_token = "Paste the secret data"
