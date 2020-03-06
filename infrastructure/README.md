@@ -7,7 +7,7 @@ Terraform is a tool for building, changing, and versioning infrastructure as cod
 ## Installation
 
 - [Download](https://www.terraform.io/downloads.html) the Terrafom;
-- If system is `Unix`, move the executable file to `/usr/local/bin`.
+- If system is `Unix`, move the executable file to `$PATH`.
 
 ## Argument Referance
 
@@ -18,5 +18,5 @@ Terraform is a tool for building, changing, and versioning infrastructure as cod
 ## Commands
 - `terraform init` - Initialize a Terraform working directory;
 - `terraform plan` - Generate and show an execution plan;
-- `terraform apply --var-file="main.tfvars" -var="do_token=${DO_TOKEN}"` - Builds or changes infrastructure;
-- `terraform destroy --var-file="main.tfvars" -var="do_token=${DO_TOKEN}"` - Destroy Terraform-managed infrastructure;
+- `terraform apply -var="do_token=${DO_TOKEN}"` - Builds or changes infrastructure;
+- `terraform destroy -var="do_token=${DO_TOKEN}"` - Destroy Terraform-managed infrastructure;
