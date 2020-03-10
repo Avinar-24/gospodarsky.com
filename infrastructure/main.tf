@@ -1,6 +1,5 @@
 # Configure the DigitalOcean Provider
 provider "digitalocean" {
-  # Set the variable value in *.tfvars file
   token   = "${var.do_token}"
   version = "~> 1.12"
 }

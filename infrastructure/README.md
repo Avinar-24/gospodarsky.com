@@ -13,7 +13,7 @@ Terraform is a tool for building, changing, and versioning infrastructure as cod
 
 - **token** (Required). Should be specified as an environment variable:
 
-    `export DO_TOKEN=(my token)`
+    `export DO_TOKEN=mytoken`
 
 ## Commands
 - `terraform init` - Initialize a Terraform working directory;
