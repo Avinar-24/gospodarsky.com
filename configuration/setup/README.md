@@ -9,8 +9,8 @@ This script is an alternative to manually running a bunch of commands for creati
 - [Download](https://github.com/do-community/automated-setups/blob/master/Ubuntu-18.04/initial_server_setup.sh) a script to a local machine;
 - Change `USERNAME` on your own;
 - Add your public key `~/.ssh/id_rsa.pub` into `OTHER_PUBLIC_KEYS_TO_ADD`;
-- Copy the script to your droplet: `scp path_to_script root@dropletIP:`;
-- Connet to the droplet: `ssh root@dropletIP`;
+- Copy the script to your droplet: `scp path_to_script root@gospodarsky.com:`;
+- Connet to the droplet: `ssh root@gospodarsky.com`;
 - Run the script;
 
 After script execution it will be possible to connect to the droplet without password providing:  

@@ -11,3 +11,11 @@ resource "digitalocean_droplet" "droplet" {
   region = "fra1"
   size   = "s-1vcpu-1gb"
 }
+
+# Add a domain to the DigitalOcean panel
+# An A-record of the domain will be create automatically.
+# A-record defines where your domain should direct to.
+resource "digitalocean_domain" "server" {
+  name       = "gospodarsky.com"
+  ip_address = "${digitalocean_droplet.droplet.ipv4_address}"
+}
