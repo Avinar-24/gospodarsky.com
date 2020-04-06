@@ -15,4 +15,4 @@ This script is an alternative to manually running a bunch of commands for creati
 
 After script execution it will be possible to connect to the droplet without password providing:  
 
-    ssh username@dropletIP
+    ssh username@gospodarsky.com
