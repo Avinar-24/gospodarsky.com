@@ -22,7 +22,7 @@ Create a configuration directory:
 
     sudo mkdir -p /etc/ansible
 
-Copy default configuration:
+Copy a default configuration:
 
     sudo curl https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg -o /etc/ansible/ansible.cfg
 
