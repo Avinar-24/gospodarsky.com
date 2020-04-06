@@ -4,7 +4,7 @@
      \/  \/  \/
     Managed Nodes
 
-# Installing Ansible
+# Installing Ansible to a control node
 
 ## on macOS
 
@@ -25,3 +25,7 @@ Create a configuration directory:
 Copy default configuration:
 
     sudo curl https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg -o /etc/ansible/ansible.cfg
+
+In `ansible.cfg` create or uncomment the line:
+
+    inventory = /etc/ansible/hosts
