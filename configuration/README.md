@@ -28,7 +28,7 @@ Copy a default configuration:
 
 In `ansible.cfg` create or uncomment the line to define your inventory:
 
-    inventory = /etc/ansible/hosts
+    inventory = /etc/ansible/hosts.yaml
 
 Also here, define a remote user you are trying to connect to your droplet:
 
@@ -36,7 +36,7 @@ Also here, define a remote user you are trying to connect to your droplet:
 
 Then copy a default inventory file:
 
-    sudo curl https://raw.githubusercontent.com/ansible/ansible/devel/examples/hosts.yaml -o /etc/ansible/hosts
+    sudo curl https://raw.githubusercontent.com/ansible/ansible/devel/examples/hosts.yaml -o /etc/ansible/hosts.yaml
 
 Add your hosts here:
 
