@@ -18,5 +18,6 @@ Terraform is a tool for building, changing, and versioning infrastructure as cod
 ## Commands
 - `terraform init` - Initialize a Terraform working directory;
 - `terraform plan` - Generate and show an execution plan;
+- `terraform validate` - Validate the configuration files;
 - `terraform apply -var="do_token=${DO_TOKEN}"` - Builds or changes infrastructure;
 - `terraform destroy -var="do_token=${DO_TOKEN}"` - Destroy Terraform-managed infrastructure;
