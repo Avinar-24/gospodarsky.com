@@ -1,0 +1,71 @@
+- hosts: gospodarsky
+  become: yes
+  vars:
+    email: "art.gospodarsky@gmail.com"
+    hostname: "gospodarsky.com"
+    user: arty
+  tasks:
+    - name: Update all packages to the latest version
+      apt:
+        update_cache: yes
+        upgrade: yes
+    - name: Check if *** System Restart Required ***
+      shell: "test -f /var/run/reboot-required"
+      register: test_result
+      ignore_errors: yes
+    - name: Reboot a managed node if needed
+      when: test_result.rc == 0
+      reboot:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: latest
+    - name: Adjusting the Firewall
+      ufw:
+        name: Nginx Full
+        rule: allow
+    - name: Run Nginx
+      systemd:
+        name: nginx
+        state: started
+    - name: Make the app directory
+      file:
+        path: /home/{{ user }}/gospodarsky/
+        state: directory
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: "700"
+    - name: Install Certbot and Pip
+      apt:
+        name: "{{ package }}"
+        state: latest
+      vars:
+        package:
+          - certbot
+          - python-pip
+    - name: Install Certbot Nginx
+      pip:
+        name: certbot-nginx
+    - name: Obtaining a SSL Certificate
+      shell: "certbot --nginx certonly -d '{{ hostname }}' --email '{{ email }}' --agree-tos --non-interactive"
+    - name: Renew Nginx config
+      template:
+        src: "./nginx.j2"
+        dest: "/etc/nginx/sites-available/{{ hostname }}"
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: "700"
+    - name: Make the host enabled
+      file:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        state: link
+      with_items:
+        - src: "/etc/nginx/sites-available/{{ hostname }}"
+          dest: "/etc/nginx/sites-enabled/{{ hostname }}"
+    - name: Verify Nginx config
+      command: nginx -t
+    - name: Restart nginx
+      systemd:
+        state: restarted
+        name: nginx
