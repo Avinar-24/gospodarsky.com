@@ -46,7 +46,17 @@
     - name: Install Certbot Nginx
       pip:
         name: certbot-nginx
+    - name: Check if a certificate exists
+      shell: "
+        test -f /etc/letsencrypt/live/gospodarsky.com/fullchain.pem &&
+        test -f /etc/letsencrypt/live/gospodarsky.com/privkey.pem &&
+        test -f /etc/letsencrypt/ssl-dhparams.pem &&
+        test -f /etc/letsencrypt/options-ssl-nginx.conf
+      "
+      register: ssh_result
+      ignore_errors: yes
     - name: Obtaining a SSL Certificate
+      when: ssh_result.rc != 0
       shell: "certbot --nginx certonly -d '{{ hostname }}' --email '{{ email }}' --agree-tos --non-interactive"
     - name: Renew Nginx config
       template:
