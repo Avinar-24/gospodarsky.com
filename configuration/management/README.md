@@ -60,8 +60,8 @@ Ping a specific host:
     ansible gospodarsky -m ping
 
 Run a playbook:
-  
- ansible-playbook path/to/playbook --ask-become-pass -vvv
+
+    ansible-playbook path/to/playbook --ask-become-pass -vvv
 
 # NGINX
 
