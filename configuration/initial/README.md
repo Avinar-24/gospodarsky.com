@@ -13,6 +13,6 @@ This script is an alternative to manually running a bunch of commands for creati
 - Connet to the droplet: `ssh root@gospodarsky.com`;
 - Run the script;
 
-After script execution it will be possible to connect to the droplet without password providing:  
+After script execution it will be possible to connect to the droplet without password providing:
 
     ssh username@gospodarsky.com
