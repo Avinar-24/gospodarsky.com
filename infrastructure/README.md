@@ -6,17 +6,19 @@ Terraform is a tool for building, changing, and versioning infrastructure as cod
 
 ## Installation
 
-- [Download](https://www.terraform.io/downloads.html) the Terrafom;
+- [Download](https://www.terraform.io/downloads.html) Terrafom;
 - If system is `Unix`, move the executable file to `$PATH`.
 
 ## Argument Referance
 
 - **token** (Required). Should be specified as an environment variable:
 
-    `export DO_TOKEN=mytoken`
+  `export DO_TOKEN=mytoken`
 
 ## Commands
-- `terraform init` - Initialize a Terraform working directory;
+
+- `terraform init` - Initialize a working directory;
 - `terraform plan` - Generate and show an execution plan;
+- `terraform validate` - Validate configuration files;
 - `terraform apply -var="do_token=${DO_TOKEN}"` - Builds or changes infrastructure;
-- `terraform destroy -var="do_token=${DO_TOKEN}"` - Destroy Terraform-managed infrastructure;
+- `terraform destroy -var="do_token=${DO_TOKEN}"` - Destroy infrastructure;

@@ -58,3 +58,33 @@ Ping all hosts:
 Ping a specific host:
 
     ansible gospodarsky -m ping
+
+Run a playbook:
+  
+ ansible-playbook path/to/playbook --ask-become-pass -vvv
+
+# NGINX
+
+To stop your web server:
+
+    sudo systemctl stop nginx
+
+To start the web server:
+
+    sudo systemctl start nginx
+
+To stop and then start the service again:
+
+    sudo systemctl restart nginx
+
+To reload without dropping connections:
+
+    sudo systemctl reload nginx
+
+By default, Nginx is configured to start automatically when the server boots. To disable the service:
+
+    sudo systemctl disable nginx
+
+To re-enable the service to start up at boot:
+
+    sudo systemctl enable nginx
