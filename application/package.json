@@ -4,7 +4,7 @@
   "repository": "git@github.com:Avinar-24/gospodarsky.com.git",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --open --hot --config webpack.dev.js"
+    "start": "webpack-dev-server --config webpack.dev.js"
   },
   "devDependencies": {
     "@types/react": "^16.9.34",
