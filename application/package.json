@@ -3,9 +3,9 @@
   "license": "ISC",
   "repository": "git@github.com:Avinar-24/gospodarsky.com.git",
   "scripts": {
-    "build:app": "webpack --config webpack.prod.js",
+    "build:app": "webpack --config client/webpack.prod.js",
     "build:server": "webpack --config server/webpack.common.js",
-    "start:app": "webpack-dev-server --config webpack.dev.js"
+    "start:app": "webpack-dev-server --config client/webpack.dev.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
