@@ -3,9 +3,9 @@
   "license": "ISC",
   "repository": "git@github.com:Avinar-24/gospodarsky.com.git",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "server": "webpack --config webpack.server.js",
-    "start": "webpack-dev-server --config webpack.dev.js"
+    "build:app": "webpack --config webpack.prod.js",
+    "build:server": "webpack --config server/webpack.common.js",
+    "start:app": "webpack-dev-server --config webpack.dev.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
@@ -16,11 +16,10 @@
     "html-webpack-plugin": "^4.3.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^7.0.2",
-    "ts-node": "^8.10.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   },
