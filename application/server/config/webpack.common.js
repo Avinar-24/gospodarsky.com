@@ -2,8 +2,7 @@ const path = require("path");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  mode: "development",
-  entry: "./server/index.tsx",
+  entry: "./server/src/index.tsx",
   externals: [nodeExternals()],
   module: {
     rules: [
@@ -13,10 +12,6 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
-  },
-  output: {
-    path: path.resolve("build"),
-    filename: "index.js",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

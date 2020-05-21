@@ -5,7 +5,7 @@ import React from "react";
 import express from "express";
 import ReactDOMServer from "react-dom/server";
 
-import { Hello } from "../client/src/app";
+import { Hello } from "../../client/src/app";
 
 const PORT = 8081;
 const app = express();

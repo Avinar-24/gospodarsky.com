@@ -4,7 +4,7 @@
   "repository": "git@github.com:Avinar-24/gospodarsky.com.git",
   "scripts": {
     "build:app": "webpack --config client/config/webpack.prod.js",
-    "build:server": "webpack --config server/webpack.common.js",
+    "build:server": "webpack --config server/config/webpack.prod.js",
     "start:app": "webpack-dev-server --config client/config/webpack.dev.js"
   },
   "devDependencies": {
