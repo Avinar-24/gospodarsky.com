@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: "./client/src/index.tsx",
   module: {
     rules: [
       {
@@ -13,8 +14,17 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./client/src/index.html",
       filename: "./index.html",
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      custom: [
+        {
+          test: "main.js",
+          attribute: "type",
+          value: "text/jsx",
+        },
+      ],
     }),
   ],
   resolve: {
